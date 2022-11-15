@@ -1,0 +1,35 @@
+@use 'variables' as var;
+
+@mixin label {
+    display: block;
+    color: var.$Dark-grayish-cyan;
+    font-size: .75em;
+    margin-bottom: 8px;
+}
+
+@mixin input() {
+    font-family: var.$Font;
+    font-size: 1em;
+    text-align: right;
+    caret-color: var.$Strong-cyan;
+    border-radius: 4px;
+    padding-right: 10px;
+    border: none;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 30px;
+    color: var.$Very-dark-cyan;
+
+    &:focus{
+        outline: none;
+        border: 2px solid var.$Strong-cyan;
+    }
+    &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+    background: {
+        color: var.$Very-light-grayish-cyan;
+        repeat: no-repeat;
+        position: 10px, center;
+    }
+}
